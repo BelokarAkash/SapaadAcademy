@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WordPress Project Setup Guide</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 2rem;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      code {
+        background-color: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        overflow: auto;
+        border-radius: 5px;
+      }
+      ul {
+        padding-left: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WordPress Project Setup Guide</h1>
+    <p>
+      This guide helps you set up the WordPress project locally by pulling code
+      from GitHub (without using Duplicator).
+    </p>
+
+    <h2>🔧 Requirements</h2>
+    <ul>
+      <li>PHP 7.4 or higher</li>
+      <li>MySQL</li>
+      <li>Apache or Nginx (LocalWP, XAMPP, MAMP, etc.)</li>
+      <li>WordPress Core Files</li>
+    </ul>
+
+    <h2>🚀 Setup Steps</h2>
+    <ol>
+      <li>
+        <strong>Clone the Repository</strong>
+        <pre><code>git clone https://github.com/your-username/your-repo-name.git</code></pre>
+      </li>
+      <li>
+        <strong>Download WordPress</strong>
+        <ul>
+          <li>
+            Download from
+            <a href="https://wordpress.org/download/" target="_blank"
+              >wordpress.org</a
+            >
+          </li>
+          <li>Move the cloned theme into <code>/wp-content/themes/</code></li>
+        </ul>
+      </li>
+      <li>
+        <strong>Create a Database</strong>
+        <ul>
+          <li>Use phpMyAdmin or CLI</li>
+          <li>Example DB name: <code>wp_project</code></li>
+        </ul>
+      </li>
+      <li>
+        <strong>Configure <code>wp-config.php</code></strong>
+        <pre><code>
+define( 'DB_NAME', 'wp_project' );
+define( 'DB_USER', 'root' );
+define( 'DB_PASSWORD', '' );
+      </code></pre>
+      </li>
+      <li>
+        <strong>Run the Installer</strong>
+        <ul>
+          <li>Open <code>http://localhost/your-folder/</code> in browser</li>
+          <li>Complete WordPress setup</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Activate the Theme</strong>
+        <ul>
+          <li>Go to WP Admin → Appearance → Themes → Activate your theme</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Import ACF Fields (Optional)</strong>
+        <ul>
+          <li>Install ACF plugin</li>
+          <li>Import from <code>/acf-json/</code> if available</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>✅ Done!</h2>
+    <p>You now have the project running locally 🎉</p>
+    <p>Need help? Reach out or open an issue.</p>
+  </body>
+</html>
